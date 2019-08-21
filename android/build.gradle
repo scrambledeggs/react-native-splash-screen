@@ -14,6 +14,9 @@ android {
         targetSdkVersion rootProject.hasProperty('targetSdkVersion') ? rootProject.targetSdkVersion : DEFAULT_TARGET_SDK_VERSION
         versionCode 1
         versionName "1.0"
+        ndk {
+            abiFilters "x86", "x86_64", "armeabi-v7a", "arm64-v8a"
+        }
     }
     buildTypes {
         release {
